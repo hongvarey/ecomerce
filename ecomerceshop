@@ -1,0 +1,213 @@
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2500);
+}#wrapper{font-family:tahoma;}
+.container{width:90%;
+margin:0 auto;}
+#sub-header{width:100%;
+height:30px;
+background:bisque;
+color:black;
+margin-top:-15px;
+}
+#sub-header p{
+float:left;
+margin-top:7px;
+}
+#sub-header a{
+line-height:30px;
+margin-left:20px;
+float:right;
+color:black;
+text-decoration:none;
+}
+/*Logo styling*/
+
+#main-header{width:100%;height:100px;
+background:darkslategrey;}
+
+#logo{
+width:250px;
+margin-top:20px;
+float:left;
+}
+#my{font-size:45px;
+font-weight:bold;
+margin-left:-100px;
+color:yellow;}
+#shop{color:yellow;}
+/*Searching Area*/
+#search{width:650px;
+float:left;
+padding:20px;
+}
+.search{
+width:650px;
+height:30px;
+border:none;
+border-radius:5px;
+margin-top:10px;
+padding-left:10px;
+margin-left:-150px;
+}
+.submit{
+width:60px;
+height:30px;
+border:none;
+border-radius:5px;
+float:right;
+margin-top:11px;
+margin-right:80px;
+}
+/*
+User menu
+*/
+#user-menu{
+width:300px;
+float:right;
+margin-top:-60px;
+}
+/* List style */
+#user-menu li{
+float:left;
+width:140px;
+text-align:center;
+list-style:none;
+font-size:25px;
+border-left:1px solid black;
+}
+#user-menu li:hover{
+font-size:30px;
+transition: all .5s ease;
+}
+#user-menu li a{
+color:white;
+text-decoration:none;
+}
+/* Navigation Bar*/
+#navigation{
+width:100%;
+height:35px;
+background:darkslategrey;
+float:left;
+box-shadow:5px 1px 120px 5px #7fff00;
+}
+nav {
+width:100%;
+margin:0 auto;}
+nav a{
+text-decoration:none;
+color:white;
+margin:20px;
+}
+nav a:hover{
+color:yellow;
+transition:all .5s ease;
+}
+/*----------Slider--------*/
+.mySlides {display:none;}
+
+/*--------Category--------*/
+
+#heading-block{
+width:100%;
+height:auto;
+float:left;
+color:darkslategrey;
+
+}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C_shop</title>
+    <link href="C-Shop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+    <div id="header">
+    <div id="sub-header">
+        <div class="container">
+            <p>Hello world</p>
+            <a href="#">Guest</a>
+            <a href="#">Download App</a>
+            <a href="#">Help</a>
+            <a href="#">Consumer</a>
+       </div>
+    </div>
+        <!--Main Header----------------------->
+        <div id="main-header">
+            <div id="logo">
+    <span id="my">C</span><span id="shop">Shop.com</span>
+            </div>
+<!-------Search Area------>
+            <div id="search">
+                <form action="">
+                    <input class="search" type="text" name="text" placeholder="search here">
+                    <input class="submit" type="submit" name="submit" value="Search">
+
+                </form>
+            </div>
+            <!-----------------USER MENU----------->
+            <div id="user-menu">
+                <li><a href="#">Card</a></li>
+                <li><a href="#">Login</a></li>
+            </div>
+
+        </div>
+    </div>
+        <!------------Navigation--------------->
+        <div id="navigation">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">New arrivals</a>
+                <a href="#">Accessories</a>
+                <a href="#">Electronic</a>
+                <a href="#">Order</a>
+                <a href="#">Products</a>
+            </nav>
+
+        </div>
+        <!---------Home Slider---------->
+        <div id="image">
+            <div class="w3-content w3-section" style="max-width:1400px">
+                <img class="mySlides w3-animate-right" src="image/se.jpg" style="width:100%;height:250px;">
+                <img class="mySlides w3-animate-right" src="image/jss.jpg" style="width:100%;height:250px;">
+                <img class="mySlides w3-animate-right" src="image/kss.jpg" style="width:100%;height:250px;">
+            </div>
+
+<script src="C-shop.js"></script>
+        </div>
+        <!---Category--->
+        <div class="container">
+
+            <div id="heading-block">
+                <h2>Categories</h2>
+            </div>
+            <div class="cat-box">
+                <img src="image/cat2.jpg" style="height:250px;width:200px;">
+                <img src="image/cat4.jpg" style="height:250px;width:200px;">
+                <img src="image/cat5.jpg" style="height:250px;width:200px;">
+                <img src="image/cat6.jpg" style="height:250px;width:200px;">
+                <img src="image/cat7.jpg" style="height:250px;width:200px;">
+                <img src="image/cat7.jpg" style="height:250px;width:200px;">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+#heading-block h2{
+line-height:35px;
+border-left:20px solid darkslategrey;
+padding-left:20px;
+}
